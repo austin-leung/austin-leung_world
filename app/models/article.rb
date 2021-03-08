@@ -4,5 +4,5 @@ class Article < ApplicationRecord
     scope :alphabetical, -> { order('title') }
     scope :active,       -> { where(active: true) }
 
-    validates :title, :content 
+    validates_presence_of :title, :context 
 end
